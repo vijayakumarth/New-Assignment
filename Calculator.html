@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>javascript project </title>
+</head>
+<style>
+body
+{ 
+background-image:url("bis.jpg");
+background-repeat:no-repeat;
+
+  height: 500px; 
+  background-position: center; 
+   background-size: cover;
+
+text-align:center;
+}
+.title
+{
+margin-bottom:10px;
+text-align:center;
+width:210px;
+color:white;
+border:solid black 2px;
+}
+.ss{
+text-align:center;
+width:45px;
+color:blue;
+border:solid black 2px;
+}
+.jj{
+border:solid pink 4px;
+width:215px;
+text-align:center;
+}
+</style>
+<body>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<center>
+<div class="jj">
+<div class="title">Calculator</div>
+<table border="2">
+<tr>
+<td colspan="3"><input type="text" id="result"></td>
+<td><input type="button" onclick="clr()" value="c"></td>
+</tr>
+<tr>
+<td><input type="button"  class="ss" onclick="display('1')" value="1"></td>
+<td><input type="button"  class="ss" onclick="display('2')" value="2"></td>
+<td><input type="button"  class="ss" onclick="display('3')" value="3"></td>
+<td><input type="button" class="ss"onclick="display('/')" value="/"></td>
+</tr>
+<tr>
+<td><input type="button"  class="ss"onclick="display('4')" value="4"></td>
+<td><input type="button"  class="ss"onclick="display('5')" value="5"></td>
+<td><input type="button" class="ss" onclick="display('6')" value="6"></td>
+<td><input type="button"  class="ss"onclick="display('+')" value="+"></td>
+</tr>
+<tr>
+<td><input type="button" class="ss" onclick="display('7')" value="7"></td>
+<td><input type="button"  class="ss"onclick="display('8')" value="8"></td>
+<td><input type="button" class="ss"onclick="display('9')" value="9"></td>
+<td><input type="button" class="ss"onclick="display('-')" value="-"></td>
+</tr>
+<tr>
+<td><input type="button" class="ss" onclick="equate('')" value="="></td>
+<td><input type="button" class="ss" onclick="display('*')" value="*"></td>
+<td><input type="button"  class="ss"onclick="display('.')" value="."></td>
+<td><input type="button" class="ss"onclick="display('0')" value="0"></td>
+</tr>
+</table>
+</div>
+</center>
+<script>
+function clr()
+{
+document.getElementById("result").value="";
+}
+function display(val)
+{
+document.getElementById("result").value+=val;//value=val+val
+}
+function equate()
+{
+let x=document.getElementById("result").value;
+let y=eval(x);
+document.getElementById("result").value=y;
+}
+</script>
+</body>
+</html>
